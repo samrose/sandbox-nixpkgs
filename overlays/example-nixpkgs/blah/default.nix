@@ -12,8 +12,8 @@ buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "samrose";
     repo = "blah";
-    rev = "3418c5a232995a57c143c3420bc9be829be2803f";
-    sha256 = "0v3i3chvr7bibs0zm3v3y5w38dq556jawjbgr3zkaxzxdfgrqp97";
+    rev = "5dc7b4b41787d28fd00445be0f49451adb4206d0";
+    sha256 = "09ql7928yjdrk0aaaz6nchmafid1k0bfri1qranib3kac8inigxi";
   };
 
   buildInputs = [ python3 ];
@@ -25,6 +25,7 @@ buildPythonApplication rec {
     sed -i "$out/bin/.manage.py-wrapped" -e '
       0,/sys.argv\[0\].*;/s/sys.argv\[0\][^;]*;//
     '
+    ${python3}/bin/python $out/bin/.manage.py-wrapped collectstatic --noinput
   '';
 
   propagatedBuildInputs = [ django_2_2 ];

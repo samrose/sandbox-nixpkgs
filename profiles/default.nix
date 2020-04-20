@@ -6,7 +6,7 @@
   services.mingetty.autologinUser = "root";
   services.example.enable = true;
   services.blah.enable = true;
-  networking.firewall.allowedTCPPorts = [ 80 443 8000 ];
+  networking.firewall.allowedTCPPorts = [ 22 80 443 8000 ];
   
     services.nginx = {
       enable = true;

@@ -20,6 +20,7 @@ with lib;
     head (attrVals imageNames system);
 
   example = callPackage ./example {};
+  blah = python37Packages.callPackage ./blah {};
 
   example-nixpkgs = recurseIntoAttrs {
     profile = tryDefault <nixos-config> ../../profiles;

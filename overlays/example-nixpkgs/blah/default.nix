@@ -12,8 +12,8 @@ buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "samrose";
     repo = "blah";
-    rev = "d1c59317c745f8a8bde3b562c8ecf955468d757f";
-    sha256 = "02fkf4z2gh8hhj6c8sdr6ipyv8w2lrh81hxihwk1amql2mayay0j";
+    rev = "ccf4281f347fbed25d7b18f1591716a2bac120a8";
+    sha256 = "00d6ip35fzybzppff84gfcz74hbma83b3zi9xwwib12y0yvxpwzs";
   };
 
   buildInputs = [ python3 ];

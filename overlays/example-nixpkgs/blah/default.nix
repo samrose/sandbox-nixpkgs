@@ -19,7 +19,7 @@ buildPythonApplication rec {
   buildInputs = [ python3 ];
 
   postFixup = ''
-    cp $src/db.sqlite3 /var
+    cp $src/db.sqlite3 /var/db.sqlite3
     wrapPythonProgramsIn "$out/bin/manage.py"
     #HACK wrapper breaks django manage.py
     sed -i "$out/bin/.manage.py-wrapped" -e '

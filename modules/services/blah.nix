@@ -20,7 +20,7 @@ in
     systemd.services.blah = {
       wantedBy = [ "multi-user.target" ];
 
-      serviceConfig.ExecStart = "${cfg.package}/bin/manage.py runserver 0.0.0.0:8000";
+      serviceConfig.ExecStart = "${cfg.package}/bin/.manage.py-wrapped runserver 0.0.0.0:8000";
     };
   };
 }
